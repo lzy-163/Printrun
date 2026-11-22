@@ -47,7 +47,7 @@ jobs:
         # Simple test that but might be enough to detect regressions
         # particularly those due to wxPython versions
         run: |
-          ./pronterface.py -h
+          xvfb-run ./pronterface.py -h
 
   unit_test:
     name: Unit testing with Python ${{ matrix.python-version }}
